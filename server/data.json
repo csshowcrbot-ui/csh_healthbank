@@ -1,0 +1,704 @@
+{
+  "users": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "employee_no": "E2108",
+      "line_user_id": "U1234567890abcdef",
+      "card_uid": "CARD-CSH-8821",
+      "name": "陳小嵐",
+      "dept_code": "急診護理部",
+      "role": "STAFF",
+      "is_active": true,
+      "created_at": "2026-01-01T08:00:00Z",
+      "updated_at": "2026-11-11T02:14:42.415Z"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "employee_no": "A0001",
+      "line_user_id": "Uadmin999888",
+      "card_uid": "CARD-CSH-0001",
+      "name": "林家豪 (職安衛管理師)",
+      "dept_code": "職業安全衛生室",
+      "role": "ADMIN",
+      "is_active": true,
+      "created_at": "2026-01-01T08:00:00Z",
+      "updated_at": "2026-11-11T02:14:42.415Z"
+    },
+    {
+      "id": "29d14e58-99fd-40c1-aca1-0d87a0ef02cf",
+      "employee_no": "A001",
+      "line_user_id": null,
+      "card_uid": null,
+      "name": "張凱程",
+      "dept_code": "資訊室",
+      "role": "ADMIN",
+      "password": "ZiEiHrpPq@",
+      "is_active": true,
+      "created_at": "2026-11-11T02:44:04.579Z",
+      "updated_at": "2026-11-11T02:44:04.579Z"
+    }
+  ],
+  "tree_status": {
+    "a1b2c3d4-e5f6-7890-abcd-ef1234567890": {
+      "user_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "current_level": 2,
+      "total_exp": 120,
+      "pending_dew": 2,
+      "last_watered_at": "2026-10-29T18:30:00Z",
+      "updated_at": "2026-11-11T02:14:42.415Z"
+    },
+    "b2c3d4e5-f6a7-8901-bcde-f12345678901": {
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "current_level": 1,
+      "total_exp": 0,
+      "pending_dew": 1,
+      "last_watered_at": null,
+      "updated_at": "2026-11-11T02:15:14.559Z"
+    },
+    "29d14e58-99fd-40c1-aca1-0d87a0ef02cf": {
+      "user_id": "29d14e58-99fd-40c1-aca1-0d87a0ef02cf",
+      "current_level": 1,
+      "total_exp": 0,
+      "pending_dew": 0,
+      "last_watered_at": null,
+      "updated_at": "2026-11-11T02:44:04.580Z"
+    }
+  },
+  "point_ledger": [
+    {
+      "id": 1,
+      "user_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "transaction_type": "INITIAL_GRANT",
+      "points": 100,
+      "balance_snapshot": 100,
+      "idempotency_key": "INIT-GRANT-20261001",
+      "source_ref_id": "INIT-SYS",
+      "notes": "系統啟用健管初始入帳",
+      "created_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "user_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "transaction_type": "EARN_CHECKUP",
+      "points": 20,
+      "balance_snapshot": 120,
+      "idempotency_key": "HIS-CHECKUP-20261015-E2108",
+      "source_ref_id": "HIS-MED-2026-0988",
+      "notes": "年度員工定期體檢合格入帳",
+      "created_at": "2026-10-15T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "transaction_type": "EARN_SPORT",
+      "points": 1,
+      "balance_snapshot": 1,
+      "idempotency_key": "GYM-b2c3d4e5-f6a7-8901-bcde-f12345678901-2026-11-11",
+      "source_ref_id": "GYM-2026-11-11",
+      "notes": "體能教室運動滿 35 分鐘健康達標入點",
+      "created_at": "2026-11-11T02:15:14.558Z"
+    },
+    {
+      "id": 4,
+      "user_id": "29d14e58-99fd-40c1-aca1-0d87a0ef02cf",
+      "transaction_type": "INITIAL_GRANT",
+      "points": 100,
+      "balance_snapshot": 100,
+      "idempotency_key": "ADMIN-INIT-29d14e58-99fd-40c1-aca1-0d87a0ef02cf-1794365044580",
+      "source_ref_id": "ADMIN-CREATE-USER",
+      "notes": "後台建立會員初始點數入帳",
+      "created_at": "2026-11-11T02:44:04.580Z"
+    }
+  ],
+  "redemptions": [
+    {
+      "id": "bbc3d848-90c8-4777-8066-42d7753c801a",
+      "user_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "type": "INTERNAL_VOUCHER",
+      "item_name": "員工餐廳 50 元折抵券",
+      "deducted_points": 50,
+      "actual_cash_value": 50,
+      "qr_voucher_code": "CSH-VOUCHER-DEMO-01",
+      "status": "USED",
+      "used_at": "2026-10-20T12:30:00Z",
+      "created_at": "2026-10-20T11:00:00Z"
+    }
+  ],
+  "raw_hardware_logs": [
+    {
+      "id": 11,
+      "source": "GYM_DOOR_ENTRY",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "user": "林家豪 (職安衛管理師)",
+        "sport_id": "sport-treadmill",
+        "sport_name": "跑步機有氧訓練",
+        "occupied_by": "陳小嵐"
+      },
+      "status": "OCCUPIED",
+      "message": "【體能教室進場受限】林家豪 (職安衛管理師) 欲使用「跑步機有氧訓練」（限單人），目前由 陳小嵐 使用中。",
+      "created_at": "2026-11-11T03:50:00.462Z"
+    },
+    {
+      "id": 10,
+      "source": "GYM_DOOR_ENTRY",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-8821",
+        "user": "陳小嵐",
+        "entry_method": "QR_SCAN",
+        "sport_name": "跑步機有氧訓練",
+        "usage_mode": "SINGLE",
+        "qr_code": "CSH-SPORT-TREADMILL"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室掃碼進場】陳小嵐 刷卡並掃描專屬 QR (CSH-SPORT-TREADMILL) 進行「跑步機有氧訓練」，計時展開。",
+      "created_at": "2026-11-11T03:48:32.038Z"
+    },
+    {
+      "id": 9,
+      "source": "GYM_DOOR_EXIT",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "durationMins": 35,
+        "sport_name": "跑步機有氧訓練"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室刷退】林家豪 (職安衛管理師) 完成「跑步機有氧訓練」35 分鐘，點數 +1，露水 +1",
+      "created_at": "2026-11-11T03:46:46.810Z"
+    },
+    {
+      "id": 8,
+      "source": "GYM_DOOR_ENTRY",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "user": "林家豪 (職安衛管理師)",
+        "entry_method": "QR_SCAN",
+        "sport_name": "跑步機有氧訓練",
+        "usage_mode": "SINGLE",
+        "qr_code": "CSH-SPORT-TREADMILL"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室掃碼進場】林家豪 (職安衛管理師) 刷卡並掃描專屬 QR (CSH-SPORT-TREADMILL) 進行「跑步機有氧訓練」，計時展開。",
+      "created_at": "2026-11-11T03:46:37.096Z"
+    },
+    {
+      "id": 7,
+      "source": "GYM_DOOR_EXIT",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "durationMins": 35,
+        "sport_name": "跑步機有氧訓練"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室刷退】林家豪 (職安衛管理師) 完成「跑步機有氧訓練」35 分鐘，點數 +1，露水 +1",
+      "created_at": "2026-11-11T03:46:18.597Z"
+    },
+    {
+      "id": 6,
+      "source": "GYM_DOOR_ENTRY",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "user": "林家豪 (職安衛管理師)",
+        "entry_method": "QR_SCAN",
+        "sport_name": "跑步機有氧訓練",
+        "usage_mode": "SINGLE",
+        "qr_code": "CSH-SPORT-TREADMILL"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室掃碼進場】林家豪 (職安衛管理師) 刷卡並掃描專屬 QR (CSH-SPORT-TREADMILL) 進行「跑步機有氧訓練」，計時展開。",
+      "created_at": "2026-11-11T03:46:14.034Z"
+    },
+    {
+      "id": 5,
+      "source": "GYM_DOOR_EXIT",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "durationMins": 35
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室刷退】林家豪 (職安衛管理師) 運動達 35 分鐘，點數 +1，露水 +1",
+      "created_at": "2026-11-11T03:17:19.088Z"
+    },
+    {
+      "id": 4,
+      "source": "GYM_DOOR_ENTRY",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "user": "林家豪 (職安衛管理師)",
+        "entry_method": "QR_SCAN",
+        "qr_code": "CSH-GYM-QR-MWBJSQRZ-JEOT"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室掃碼進場】林家豪 (職安衛管理師) 刷卡並掃描 QR Code (CSH-GYM-QR-MWBJSQRZ-JEOT) 入場，計時展開。",
+      "created_at": "2026-11-11T03:17:14.808Z"
+    },
+    {
+      "id": 3,
+      "source": "GYM_DOOR_EXIT",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "durationMins": 35
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室刷退】林家豪 (職安衛管理師) 運動達 35 分鐘，點數 +1，露水 +1",
+      "created_at": "2026-11-11T02:15:14.559Z"
+    },
+    {
+      "id": 2,
+      "source": "GYM_DOOR_ENTRY",
+      "raw_payload": {
+        "card_uid": "CARD-CSH-0001",
+        "user": "林家豪 (職安衛管理師)"
+      },
+      "status": "SUCCESS",
+      "message": "【體能教室進場】林家豪 (職安衛管理師) 嗶卡入場，計時展開。",
+      "created_at": "2026-11-11T02:15:02.309Z"
+    },
+    {
+      "id": 1,
+      "source": "POS_RESTAURANT",
+      "raw_payload": {
+        "terminal": "POS-02",
+        "receipt": "R20261028-0442",
+        "card_uid": "CARD-CSH-8821",
+        "item": "蔬食套餐"
+      },
+      "status": "SUCCESS",
+      "message": "週二蔬食感應成功，入點 +1，露水 +1",
+      "created_at": "2026-10-28T12:15:00Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "ef685717-7023-4599-b126-5e644519740f",
+      "title": "體能教室・運動計時展開",
+      "message": "您已完成刷卡與 QR Code 掃碼進場（跑步機有氧訓練），運動滿 30 分鐘並刷退將可獲得健康點數 +1。",
+      "type": "info",
+      "is_read": false,
+      "created_at": "2026-11-11T03:48:32.039Z"
+    },
+    {
+      "id": "fd01481a-e1a5-48ad-8456-d79a77bafcaf",
+      "title": "LINE 智慧通知・行健有成",
+      "message": "恭喜 林家豪 (職安衛管理師) 完成 35 分鐘「跑步機有氧訓練」！健康點數 +1 已入帳。",
+      "type": "sport",
+      "is_read": false,
+      "created_at": "2026-11-11T03:46:46.810Z"
+    },
+    {
+      "id": "8a06cdfa-46bd-4d0e-ad59-1d95b336e1db",
+      "title": "體能教室・運動計時展開",
+      "message": "您已完成刷卡與 QR Code 掃碼進場（跑步機有氧訓練），運動滿 30 分鐘並刷退將可獲得健康點數 +1。",
+      "type": "info",
+      "is_read": false,
+      "created_at": "2026-11-11T03:46:37.097Z"
+    },
+    {
+      "id": "dd2225ff-e8e1-4cce-b6bb-27364f119d3c",
+      "title": "LINE 智慧通知・行健有成",
+      "message": "恭喜 林家豪 (職安衛管理師) 完成 35 分鐘「跑步機有氧訓練」！健康點數 +1 已入帳。",
+      "type": "sport",
+      "is_read": false,
+      "created_at": "2026-11-11T03:46:18.598Z"
+    },
+    {
+      "id": "b0a92673-cd64-4f7b-9d75-8c1276767c17",
+      "title": "體能教室・運動計時展開",
+      "message": "您已完成刷卡與 QR Code 掃碼進場（跑步機有氧訓練），運動滿 30 分鐘並刷退將可獲得健康點數 +1。",
+      "type": "info",
+      "is_read": false,
+      "created_at": "2026-11-11T03:46:14.035Z"
+    },
+    {
+      "id": "036b40b8-2d67-42dd-82fb-d5da9669a23d",
+      "title": "LINE 智慧通知・行健有成",
+      "message": "恭喜 林家豪 (職安衛管理師) 完成 35 分鐘體能鍛鍊！健康點數 +1 已入帳。",
+      "type": "sport",
+      "is_read": false,
+      "created_at": "2026-11-11T03:17:19.088Z"
+    },
+    {
+      "id": "308481a2-5684-4ce8-b440-078dfe3ea7d1",
+      "title": "體能教室・運動計時展開",
+      "message": "您已完成刷卡與 QR Code 掃碼進場，運動滿 30 分鐘並刷退將可獲得健康點數 +1。",
+      "type": "info",
+      "is_read": false,
+      "created_at": "2026-11-11T03:17:14.809Z"
+    },
+    {
+      "id": "46692fea-15d1-4964-a8d2-48b52b0ab6bf",
+      "title": "LINE 智慧通知・行健有成",
+      "message": "恭喜 林家豪 (職安衛管理師) 完成 35 分鐘體能鍛鍊！健康點數 +1 已入帳。",
+      "type": "sport",
+      "is_read": false,
+      "created_at": "2026-11-11T02:15:14.560Z"
+    },
+    {
+      "id": "1fa08c25-cc5b-4710-8dd6-cbfe1d72c154",
+      "title": "體能教室・運動計時展開",
+      "message": "您已進入體能教室，運動滿 30 分鐘並刷退將可獲得健康點數 +1。",
+      "type": "info",
+      "is_read": false,
+      "created_at": "2026-11-11T02:15:02.310Z"
+    },
+    {
+      "id": "36440987-d83c-4f3c-975f-47b58b694a1e",
+      "title": "竹山秀傳健康銀行・溫馨提醒",
+      "message": "今日已累積 2 滴晨露，別忘了在庭園中為您的若竹輕柔澆灌。",
+      "type": "info",
+      "is_read": false,
+      "created_at": "2026-11-11T02:14:42.415Z"
+    }
+  ],
+  "gym_sessions": {
+    "CARD-CSH-8821": {
+      "card_uid": "CARD-CSH-8821",
+      "user_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "user_name": "陳小嵐",
+      "start_time": "2026-11-11T03:48:32.036Z",
+      "terminal": "體能教室 A 區",
+      "entry_method": "QR_SCAN",
+      "qr_code": "CSH-SPORT-TREADMILL",
+      "sport_id": "sport-treadmill",
+      "sport_name": "跑步機有氧訓練",
+      "usage_mode": "SINGLE",
+      "min_duration_mins": 30,
+      "reward_points": 1,
+      "reward_dew": 1
+    }
+  },
+  "habits_status": {
+    "a1b2c3d4-e5f6-7890-abcd-ef1234567890": {
+      "vegetarian_today": false,
+      "vegetarian_time": null,
+      "gym_today": false,
+      "gym_time": null,
+      "education_enrolled": true,
+      "checkup_completed": true,
+      "cancer_screen_completed": true
+    },
+    "b2c3d4e5-f6a7-8901-bcde-f12345678901": {
+      "gym_today": true,
+      "gym_time": "35 分鐘"
+    }
+  },
+  "catalog_items": [
+    {
+      "id": "canteen-50",
+      "name": "員工餐廳 50 元折抵券",
+      "points": 50,
+      "cashValue": 50,
+      "category": "MEAL",
+      "icon": "🍱",
+      "stock": 100,
+      "is_active": true,
+      "description": "憑 QR Code 於醫院員工餐廳結帳時折抵 50 元消費，當日現折。",
+      "created_at": "2026-11-11T02:24:26.437Z",
+      "updated_at": "2026-11-11T02:24:26.437Z"
+    },
+    {
+      "id": "towel-80",
+      "name": "秀傳簡約運動吸水巾",
+      "points": 80,
+      "cashValue": 80,
+      "category": "SPORTS",
+      "icon": "🧣",
+      "stock": 50,
+      "is_active": true,
+      "description": "100% 純棉雙面微孔吸水，透氣速乾，附秀傳綠葉刺繡，體能運動良伴。",
+      "created_at": "2026-11-11T02:24:26.437Z",
+      "updated_at": "2026-11-11T02:24:26.437Z"
+    },
+    {
+      "id": "oolong-tea-100",
+      "name": "竹山在地高山烏龍冷泡茶組",
+      "points": 100,
+      "cashValue": 100,
+      "category": "LOCAL",
+      "icon": "🍵",
+      "stock": 40,
+      "is_active": true,
+      "description": "嚴選竹山大鞍高山茶園手採高山茶，清香甘醇，解熱生津。",
+      "created_at": "2026-11-11T02:24:26.437Z",
+      "updated_at": "2026-11-11T02:24:26.437Z"
+    },
+    {
+      "id": "massage-150",
+      "name": "院內心理舒壓音療體驗券 (30分)",
+      "points": 150,
+      "cashValue": 150,
+      "category": "WELLNESS",
+      "icon": "🧘",
+      "stock": 20,
+      "is_active": true,
+      "description": "由院內身心健康中心專業芳療放鬆空間提供 30 分鐘頌缽音療放鬆。",
+      "created_at": "2026-11-11T02:24:26.437Z",
+      "updated_at": "2026-11-11T02:24:26.437Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "25138b06-8bc9-4737-9940-5b550e3e926e",
+      "actor": "林家豪 (職安衛管理師) (A0001)",
+      "action": "CREATE_USER",
+      "target_type": "USER",
+      "target_id": "A001",
+      "reason": "新增員工 張凱程 (資訊室)",
+      "before_val": null,
+      "after_val": {
+        "employee_no": "A001",
+        "role": "ADMIN",
+        "initial_points": 100
+      },
+      "created_at": "2026-11-11T02:44:04.581Z"
+    },
+    {
+      "id": "1f8a8998-d852-49fb-b93f-976ddf625f8e",
+      "actor": "林家豪 (職安衛管理師) (A0001)",
+      "action": "DELETE_CATALOG_ITEM",
+      "target_type": "CATALOG",
+      "target_id": "item-mwbhxdn0-857",
+      "reason": "刪除日嚐好物「測試竹山茶葉蛋券」",
+      "before_val": {
+        "name": "測試竹山茶葉蛋券",
+        "points": 20
+      },
+      "after_val": null,
+      "created_at": "2026-11-11T02:24:43.622Z"
+    },
+    {
+      "id": "48f0d2fa-647b-4a78-8c9d-def71a4bb20b",
+      "actor": "林家豪 (職安衛管理師) (A0001)",
+      "action": "UPDATE_CATALOG_ITEM",
+      "target_type": "CATALOG",
+      "target_id": "item-mwbhxdn0-857",
+      "reason": "更新日嚐好物「測試竹山茶葉蛋券」",
+      "before_val": {
+        "name": "測試竹山茶葉蛋券",
+        "points": 15,
+        "stock": 30,
+        "is_active": true
+      },
+      "after_val": {
+        "name": "測試竹山茶葉蛋券",
+        "points": 20,
+        "stock": 30,
+        "is_active": false
+      },
+      "created_at": "2026-11-11T02:24:43.613Z"
+    },
+    {
+      "id": "eaa52588-6c8c-47d6-85d9-9d56d6bc3445",
+      "actor": "林家豪 (職安衛管理師) (A0001)",
+      "action": "CREATE_CATALOG_ITEM",
+      "target_type": "CATALOG",
+      "target_id": "item-mwbhxdn0-857",
+      "reason": "新增日嚐好物「測試竹山茶葉蛋券」",
+      "before_val": null,
+      "after_val": {
+        "name": "測試竹山茶葉蛋券",
+        "points": 15,
+        "stock": 30
+      },
+      "created_at": "2026-11-11T02:24:43.598Z"
+    }
+  ],
+  "gym_qr_tokens": {
+    "CSH-GYM-QR-MWBJSQRZ-JEOT": {
+      "qr_code": "CSH-GYM-QR-MWBJSQRZ-JEOT",
+      "card_uid": "CARD-CSH-0001",
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "employee_no": "A0001",
+      "gate_id": "GYM-GATE-01",
+      "used": true,
+      "expires_at": "2026-11-11T03:22:06.575Z",
+      "created_at": "2026-11-11T03:17:06.575Z",
+      "used_at": "2026-11-11T03:17:14.807Z"
+    },
+    "CSH-GYM-QR-MWBJTN76-H1WZ": {
+      "qr_code": "CSH-GYM-QR-MWBJTN76-H1WZ",
+      "card_uid": "CARD-CSH-0001",
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "employee_no": "A0001",
+      "gate_id": "GYM-GATE-01",
+      "used": false,
+      "expires_at": "2026-11-11T03:22:48.594Z",
+      "created_at": "2026-11-11T03:17:48.594Z"
+    },
+    "CSH-GYM-QR-MWBJTW55-3T9U": {
+      "qr_code": "CSH-GYM-QR-MWBJTW55-3T9U",
+      "card_uid": "CARD-CSH-0001",
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "employee_no": "A0001",
+      "gate_id": "GYM-GATE-01",
+      "used": false,
+      "expires_at": "2026-11-11T03:23:00.185Z",
+      "created_at": "2026-11-11T03:18:00.185Z"
+    },
+    "CSH-GYM-QR-MWBKANG6-K32P": {
+      "qr_code": "CSH-GYM-QR-MWBKANG6-K32P",
+      "card_uid": "CARD-CSH-0001",
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "employee_no": "A0001",
+      "gate_id": "GYM-GATE-01",
+      "used": false,
+      "expires_at": "2026-11-11T03:36:02.070Z",
+      "created_at": "2026-11-11T03:31:02.070Z"
+    },
+    "CSH-GYM-QR-MWBKAPA7-7PJZ": {
+      "qr_code": "CSH-GYM-QR-MWBKAPA7-7PJZ",
+      "card_uid": "CARD-CSH-0001",
+      "user_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "employee_no": "A0001",
+      "gate_id": "GYM-GATE-01",
+      "used": false,
+      "expires_at": "2026-11-11T03:36:04.447Z",
+      "created_at": "2026-11-11T03:31:04.447Z"
+    }
+  },
+  "sport_items": [
+    {
+      "id": "sport-treadmill",
+      "name": "跑步機有氧訓練",
+      "category": "CARDIO",
+      "location": "體能教室 A 區",
+      "min_duration_mins": 30,
+      "reward_points": 1,
+      "reward_dew": 1,
+      "icon": "🏃",
+      "is_active": true,
+      "description": "配備心率監測跑步機，持續慢跑或快走達標即可獲健康點數與露水。",
+      "created_at": "2026-11-11T03:35:24.139Z",
+      "updated_at": "2026-11-11T03:35:24.139Z",
+      "qr_code": "CSH-SPORT-TREADMILL",
+      "usage_mode": "SINGLE",
+      "daily_limit": 1
+    },
+    {
+      "id": "sport-strength",
+      "name": "重訓肌力訓練",
+      "category": "STRENGTH",
+      "location": "體能教室 B 區",
+      "min_duration_mins": 30,
+      "reward_points": 1,
+      "reward_dew": 1,
+      "icon": "🏋️",
+      "is_active": true,
+      "description": "啞鈴與多功能肌力訓練器材，強化核心與上下肢肌耐力。",
+      "created_at": "2026-11-11T03:35:24.139Z",
+      "updated_at": "2026-11-11T03:35:24.139Z",
+      "qr_code": "CSH-SPORT-STRENGTH",
+      "usage_mode": "MULTI",
+      "daily_limit": 1
+    },
+    {
+      "id": "sport-cycling",
+      "name": "飛輪有氧訓練",
+      "category": "CARDIO",
+      "location": "體能教室飛輪區",
+      "min_duration_mins": 30,
+      "reward_points": 1,
+      "reward_dew": 1,
+      "icon": "🚴",
+      "is_active": true,
+      "description": "室內有氧飛輪踩踏訓練，有效提升心肺適能與燃脂效率。",
+      "created_at": "2026-11-11T03:35:24.139Z",
+      "updated_at": "2026-11-11T03:35:24.139Z",
+      "qr_code": "CSH-SPORT-CYCLING",
+      "usage_mode": "MULTI",
+      "daily_limit": 1
+    },
+    {
+      "id": "sport-yoga",
+      "name": "舒壓伸展瑜珈",
+      "category": "FLEXIBILITY",
+      "location": "身心韻律教室",
+      "min_duration_mins": 30,
+      "reward_points": 1,
+      "reward_dew": 1,
+      "icon": "🧘",
+      "is_active": true,
+      "description": "溫和伸展肩頸與下背肌群，舒緩醫護輪班累積之身心疲勞。",
+      "created_at": "2026-11-11T03:35:24.139Z",
+      "updated_at": "2026-11-11T03:35:24.139Z",
+      "qr_code": "CSH-SPORT-YOGA",
+      "usage_mode": "MULTI",
+      "daily_limit": 1
+    }
+  ],
+  "sport_daily_usage": {},
+  "habit_tasks": [
+    {
+      "id": "task-vege",
+      "category": "日嚐",
+      "title": "蔬食之日",
+      "description": "每週一、二享用無肉蔬食餐點，於餐檯嗶卡自動登記。",
+      "icon": "🥗",
+      "points_reward": 1,
+      "dew_reward": 1,
+      "source_type": "POS感應刷卡",
+      "habit_key": "VEGETARIAN",
+      "sort_order": 1,
+      "completed_status_text": "今日已達成",
+      "pending_status_text": "尚未感應刷卡",
+      "default_completed_at": "12:15",
+      "is_active": true,
+      "created_at": "2026-11-12T02:22:44.481Z",
+      "updated_at": "2026-11-12T02:22:44.481Z"
+    },
+    {
+      "id": "task-edu",
+      "category": "習藝",
+      "title": "院內教育與講座傳承",
+      "description": "參與健康促進課程或出任院內講師，滋養內在底蘊。",
+      "icon": "🎓",
+      "points_reward": 2,
+      "dew_reward": 2,
+      "source_type": "人資教學系統",
+      "habit_key": "EDUCATION",
+      "sort_order": 2,
+      "completed_status_text": "本月時數合格",
+      "pending_status_text": "點擊查看本月課表",
+      "default_completed_at": "10/24 14:00",
+      "is_active": true,
+      "created_at": "2026-11-12T02:22:44.481Z",
+      "updated_at": "2026-11-12T02:22:44.481Z"
+    },
+    {
+      "id": "task-checkup",
+      "category": "養身",
+      "title": "定期健檢與癌篩",
+      "description": "完成年度員工體檢或四癌篩檢，系統定期自動串接。",
+      "icon": "🩺",
+      "points_reward": 2,
+      "dew_reward": 2,
+      "source_type": "檢驗科 HIS 系統",
+      "habit_key": "CHECKUP",
+      "sort_order": 3,
+      "completed_status_text": "年度核算合格",
+      "pending_status_text": "檢驗科查核中",
+      "default_completed_at": "10/15",
+      "is_active": true,
+      "created_at": "2026-11-12T02:22:44.481Z",
+      "updated_at": "2026-11-12T02:22:44.481Z"
+    },
+    {
+      "id": "task-gym",
+      "category": "行健",
+      "title": "院內體能空間使用",
+      "description": "跑步機、重訓器材感應刷卡達 30 分鐘，活絡氣血。",
+      "icon": "🏃",
+      "points_reward": 1,
+      "dew_reward": 1,
+      "source_type": "體能教室門禁",
+      "habit_key": "GYM",
+      "sort_order": 4,
+      "completed_status_text": "今日已達成 (30分)",
+      "pending_status_text": "尚未展開運動",
+      "default_completed_at": null,
+      "is_active": true,
+      "created_at": "2026-11-12T02:22:44.481Z",
+      "updated_at": "2026-11-12T02:22:44.481Z"
+    }
+  ]
+}
